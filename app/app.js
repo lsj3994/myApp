@@ -22,6 +22,12 @@ const app = express();
 //라우팅
 const home = require("./src/routes/home"); //홈으로 이동 . index.js가 실행 되는 원리
 
+//login.ejs에서 login.js를 연결해주기 위한 미들웨어 
+// __drname은 app.js가 위치해 있는 위치 반환
+// ${__dirname}/src/public폴더를 static(정정폴더)로 반환
+app.use(express.static(`${__dirname}/src/public`));
+
+
 //앱세팅
 app.set("views","./src/views");
 app.set("view engine","ejs");
