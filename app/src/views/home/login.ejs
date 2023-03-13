@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 단순히 아래처럼 해주어서는 연결이 안된다 
-    메인파일(app.js)에서 미들웨어로 연결 해준다  -->
-    <script src="/js/home/login.js"></script>
+    메인파일(app.js)에서 미들웨어로 연결 해준다  
+    src뒤에 defer를 붙여줘야 전역변수로서 받아옴-->
+
+    <script src="/js/home/login.js" defer></script>
     
     
     <title>Document</title>
 </head>
 
 <body>
-    <input type="text" placeholder="아이디"><br>
-    <input type="text" placeholder="비밀번호"><br>
+    <!-- id로 지정된 선택자를 login.js의 javascript에서 사용함-->
+    <input id="id" type="text" placeholder="아이디"><br>
+    <input id="psword" type="text" placeholder="비밀번호"><br>
     <button>로그인</button>
 </body>
 
