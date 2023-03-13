@@ -17,15 +17,15 @@ function login () {
         id : id.value,
         psword : psword.value,
     }; 
+    
     //서버로 데이터를 전달한다 lastapi https://www.youtube.com/watch?v=7_z95B-yF-c 참조
     fetch("/login", {
         //body로 보낼 경우 methoth에 post로 보내야 한다
         method: "POST",
         //JSON데이터로 전달한다는 내용을 header로 알려줘야한다
         headers: {
-            "Content-Type" : "apllication/json"            
+            "Content-Type": "application/json",            
         },
-        body: json.stringfy(req)
+        body: json.stringfy(req),
     });
-
 }
