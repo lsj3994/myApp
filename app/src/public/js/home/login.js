@@ -27,5 +27,8 @@ function login () {
             "Content-Type": "application/json",            
         },
         body: JSON.stringify(req),
-    });
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res)); // then으로 fetch된 데이터를 받아오기 promise알아보고 promise형태의 데이터는 then으로 받아줌
+      // .then(console.log); 형태로 바꿀수 있음
 }
