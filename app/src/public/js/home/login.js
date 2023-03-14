@@ -26,6 +26,6 @@ function login () {
         headers: {
             "Content-Type": "application/json",            
         },
-        body: json.stringfy(req),
+        body: JSON.stringify(req),
     });
 }
